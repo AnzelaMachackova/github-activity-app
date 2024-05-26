@@ -1,5 +1,6 @@
 import sqlite3
 import csv
+import logging
 
 def init_db():
     conn = sqlite3.connect('events.db')
@@ -9,7 +10,8 @@ def init_db():
             id INTEGER PRIMARY KEY,
             repo TEXT,
             event_type TEXT,
-            created_at TEXT
+            created_at TEXT,
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
         )
     ''')
     conn.commit()
@@ -23,6 +25,7 @@ def save_event(repo, event_type, created_at):
     conn.commit()
     conn.close()
 
+# for testing purposes
 def verify_insert():
     conn = sqlite3.connect('events.db')
     c = conn.cursor()
@@ -34,6 +37,6 @@ def verify_insert():
             writer = csv.writer(file)
             writer.writerow(["Repository", "Event Type", "Created At"])
             writer.writerows(result)
-        print("Data saved to events.csv")
+        logging.info("Data saved to events.csv")
     else:
-        print("Data not found in database.")
+        logging.info("Data not found in database.")
