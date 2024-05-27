@@ -27,7 +27,7 @@ Once the application is running, it hosts a REST API that provides access to the
 
 ### Accessing Statistics
 
-Endpoint: Access the statistics by navigating to: `http://localhost:5000/api/stats`. This endpoint returns and saves JSON data representing the average time between events for each repository and event type being monitored.
+Endpoint: Access the statistics by navigating to: `http://localhost:5001/api/stats`. This endpoint returns and saves JSON data representing the average time between events for each repository and event type being monitored.
 
 ## Development Notes
 
