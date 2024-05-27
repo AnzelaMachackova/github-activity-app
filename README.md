@@ -21,15 +21,13 @@ If you prefer manually setting up the environment, follow these steps:
 
 Example: `./scripts/run.sh "AnzelaMachackova/very-running-project" "owid/co2-data" "lucieyarish/huddle-landing-page" "owid/energy-data" "AnzelaMachackova/DBT-Hackathon-2024"`
 
-6. Run the application: `python app.py`
-
 ## Using the API
 
 Once the application is running, it hosts a REST API that provides access to the activity statistics.
 
 ### Accessing Statistics
 
-Endpoint: Access the statistics by navigating to: `http://localhost:5000/api/stats`. This endpoint returns JSON data representing the average time between events for each repository and event type being monitored.
+Endpoint: Access the statistics by navigating to: `http://localhost:5000/api/stats`. This endpoint returns and saves JSON data representing the average time between events for each repository and event type being monitored.
 
 ## Development Notes
 
