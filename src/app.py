@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from github_events import calculate_average_time  # Make sure to have this function accessible
+from github_events import calculate_average_time 
 
 app = Flask(__name__)
 

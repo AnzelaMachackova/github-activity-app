@@ -43,7 +43,7 @@ def calculate_average_time(db_path='events.db', days=7, max_events=500):
     SELECT repo, event_type, created_at
     FROM events
     WHERE timestamp >= ?
-    ORDER BY repo, event_type, created_at DESC
+    ORDER BY repo, event_type, created_at
     LIMIT ?
     """
     cursor.execute(query, (time_limit.strftime('%Y-%m-%dT%H:%M:%SZ'), max_events))
